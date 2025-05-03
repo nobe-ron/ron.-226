@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    background-color: #2b2b2b;
+    font-family: 'Cormorant Garamond', serif;
+    color: #eeeeee;
+  }
+  
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1C1C1C;
+    padding: 10px 40px;
+    width: 100%; /* ここが追加！幅をしっかり指定 */
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center; /* 左右どちらも縦中央揃え */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-left {
+    gap: 20px;
+    flex: 1; /* 左メニューが広がる */
+}
+
+.nav-right {
+    gap: 20px;
+    justify-content: flex-end; /* 右端に寄せる */
+}
+  @media (max-width: 768px) {
+    .nav-bar {
+      flex-direction: row; /* ←スマホでも左右並びキープ */
+    }
+  }
+  
+  /* 商品詳細レイアウト */
+  .product-detail-container {
+    background-color: white;
+    color: #1C1C1C;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .image-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  #product-img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* スライドボタンの統一 */
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    font-size: 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .slider-button.prev {
+    left: 10px;
+  }
+  
+  .slider-button.next {
+    right: 10px;
+  }
+  
+  .slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .product-info {
+    flex: 1;
+  }
+  
+  /* Add to Cartボタン */
+  .add-to-cart-btn {
+    padding: 12px 20px;
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #444;
+  }

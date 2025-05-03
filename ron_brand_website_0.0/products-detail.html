@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Detail - Ron.</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/products-detail.css" />
+</head>
+<body>
+  <header>
+    <nav class="nav-bar">
+      <ul class="nav-left">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="product-detail-container">
+    <div class="image-slider">
+      <button id="prev-btn" class="slider-btn">‹</button>
+      <img id="product-img" src="" alt="Product Image">
+      <button id="next-btn" class="slider-btn">›</button>
+    </div>
+    <div class="product-info">
+      <h1 id="product-name"></h1>
+      <p id="product-price"></p>
+      <p id="product-description"></p>
+      <button id="add-to-cart-btn" class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </main>
+
+  <script src="js/products-detail.js"></script>
+</body>
+</html>

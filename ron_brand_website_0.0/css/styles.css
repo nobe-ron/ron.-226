@@ -1,0 +1,241 @@
+/* ---------- COLOR PALETTE ---------- */
+:root {
+  --bg-gradient-dark: #2e2e30;
+  --bg-gradient-light: #3c3c3f;
+  --section-bg: #8b8c8e;
+  --card-bg: #a9aaac;
+  --text-light: #eeeeee;
+  --accent-gray: #cccccc;
+  --button-gray: #666666;
+  --button-hover: #999999;
+}
+
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Cormorant Garamond', serif;
+  background: linear-gradient(135deg, var(--bg-gradient-dark), var(--bg-gradient-light));
+  color: var(--text-light);
+  overflow-x: hidden;
+}
+
+/* ---------- INTRO GRID ---------- */
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: black;
+}
+
+.grid-cell {
+  background-color: #1C1C1C;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.black-out {
+  animation: blackOut 0.3s forwards;
+}
+
+@keyframes blackOut {
+  to {
+    background-color: black;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  opacity: 0;
+  animation: showLogo 1s ease 2.2s forwards;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+@keyframes showLogo {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInMain 1s forwards;
+}
+
+@keyframes fadeInMain {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Content wrapper */
+.content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgba(46, 46, 48, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1C1C1C;
+  padding: 20px 40px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'Scope One', serif;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  font-family: 'Scope One', serif;
+}
+
+nav a:hover {
+  color: var(--accent-gray);
+}
+
+/* Sections */
+section {
+  background-color: var(--section-bg);
+  padding: 40px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--text-light);
+}
+
+/* Swiper カルーセル */
+.swiper-container {
+  width: 60%;
+  max-width: 900px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* ナビゲーションボタン */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--white); /* 矢印の色 */
+}
+
+/* ページネーション（ドット） */
+.swiper-pagination {
+  position: relative;
+  margin-top: 10px;
+}
+/* Form */
+input,
+textarea {
+  background-color: #f1f1f1;
+  color: #1c1c1c;
+  border: 1px solid var(--accent-gray);
+  padding: 12px;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--button-gray);
+  color: var(--text-light);
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Footer */
+footer {
+  background-color: #1c1c1c;
+  color: var(--text-light);
+  text-align: center;
+  padding: 15px;
+  border-radius: 0 0 12px 12px;
+  margin-top: 30px;
+}
+
+/* Optional fade-in */
+.fade-in {
+  opacity: 0;
+  animation: fadeInMain 1s forwards;
+}
+
+@keyframes fadeInMain {
+  to {
+    opacity: 1;
+  }
+}
+
